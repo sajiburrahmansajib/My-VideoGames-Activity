@@ -7,7 +7,7 @@ import pf from './ND8_0203-1-removebg-preview.png'
 
 const Cart = (props) => {
 
-    const notify = () => toast.success(' You Done All Your Activity', {
+    const notify = () => toast.success('Yeeee ! You Done All Your Activity', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
