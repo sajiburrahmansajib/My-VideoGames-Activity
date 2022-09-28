@@ -5,7 +5,7 @@ import './Home.css'
 
 const Home = () => {
     const [games, setGames] = useState([])
-    const [time, setTime] = useState('')
+    const [time, setTime] = useState(0)
 
     useEffect(() => {
         fetch('fakeData.json')
@@ -13,10 +13,17 @@ const Home = () => {
             .then(data => setGames(data))
     }, [])
     const handleAddToGame = (selectedGame) => {
-        let timeCount = 0;
+        let newTime = 0
+        let gameSelected = [];
         const game = games.find(game => game.id === selectedGame)
-        timeCount = timeCount + game.time
-        setTime(timeCount)
+        gameSelected.push(game)
+        for (const game of gameSelected) {
+            newTime = time + game.time;
+            // setTime(timeCount)
+        }
+        console.log(newTime)
+        setTime(newTime)
+
     }
 
     return (

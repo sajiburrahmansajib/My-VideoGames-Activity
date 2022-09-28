@@ -3,7 +3,8 @@ import './Cart.css'
 import pf from './ND8_0203-1-removebg-preview.png'
 
 const Cart = (props) => {
-    const [breakTime, setBreakTime] = useState([])
+    // console.log(props.time)
+    const [breakTime, setBreakTime] = useState(0)
     const handleBreakTime = (time) => {
         setBreakTime(time)
     }
@@ -48,11 +49,11 @@ const Cart = (props) => {
                     <h2>Exercise Details</h2>
                     <div className='Exercise-time'>
                         <h4>Exercise Time</h4>
-                        <h4>{props.time}</h4>
+                        <h4>{props.time} minute</h4>
                     </div>
                     <div className='break'>
                         <h4>Break Time</h4>
-                        <h4>{breakTime}</h4>
+                        <h4>{breakTime} minute</h4>
                     </div>
                 </div>
             </div>
