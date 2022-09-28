@@ -4,7 +4,8 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './Game.css'
 
 const Game = (props) => {
-    const { name, about, picture, time, age } = props.game
+    const { id, name, about, picture, time, age } = props.game
+    const { handleAddToGame } = props
     return (
         <div className='game-info'>
             <img src={picture} alt="" />
@@ -14,7 +15,7 @@ const Game = (props) => {
                 <p>For Age : {age}</p>
                 <p>Time Required : {time}</p>
             </div>
-            <button>
+            <button onClick={() => handleAddToGame(id)}>
                 <p>Add To Activity</p>
                 <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
             </button>

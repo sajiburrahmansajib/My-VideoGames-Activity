@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.css'
 import pf from './ND8_0203-1-removebg-preview.png'
 
-const Cart = () => {
+const Cart = (props) => {
+    const [breakTime, setBreakTime] = useState([])
+    const handleBreakTime = (time) => {
+        setBreakTime(time)
+    }
+
     return (
         <div className='cart'>
             <div className='user-info'>
@@ -11,7 +16,7 @@ const Cart = () => {
                 </div>
                 <div>
                     <h2>MD.Sajibur Rahman</h2>
-                    <p>Hello, i am sajib and i love playing games ....</p>
+                    <p>Hello, i am Sajib and i love playing games ....</p>
                 </div>
                 <div>
                     <div className='user-self'>
@@ -31,26 +36,27 @@ const Cart = () => {
                 </div>
                 <div>
                     <h2>Add A Break</h2>
-                    <div className='time-container'>
-                        <span className='time'>10m</span>
-                        <span className='time'>20m</span>
-                        <span className='time'>30m</span>
-                        <span className='time'>40m</span>
-                        <span className='time'>50m</span>
+                    <div id='break-time' className='time-container'>
+                        <span onClick={() => handleBreakTime(10)} className='time'>10m</span>
+                        <span onClick={() => handleBreakTime(20)} className='time'>20m</span>
+                        <span onClick={() => handleBreakTime(30)} className='time'>30m</span>
+                        <span onClick={() => handleBreakTime(40)} className='time'>40m</span>
+                        <span onClick={() => handleBreakTime(50)} className='time'>50m</span>
                     </div>
                 </div>
                 <div className='Exercise'>
                     <h2>Exercise Details</h2>
                     <div className='Exercise-time'>
                         <h4>Exercise Time</h4>
-                        <h4>200m</h4>
+                        <h4>{props.time}</h4>
                     </div>
                     <div className='break'>
                         <h4>Break Time</h4>
-                        <h4>30m</h4>
+                        <h4>{breakTime}</h4>
                     </div>
                 </div>
             </div>
+            <button className='btn-activity'>Activity Completed</button>
 
         </div>
     );
