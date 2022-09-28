@@ -1,0 +1,14 @@
+.game-info {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.game-info img {
+    width: 75%;
+}
+
+.game-info button {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
