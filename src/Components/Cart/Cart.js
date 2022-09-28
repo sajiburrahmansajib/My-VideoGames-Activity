@@ -1,9 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { addToDb, getStoredData } from '../../utilities/fakedb';
 import './Cart.css'
 import pf from './ND8_0203-1-removebg-preview.png'
 
 const Cart = (props) => {
+
+    const notify = () => toast.success(' You Done All Your Activity', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });;
     // console.log(props.time)
     const [breakTime, setBreakTime] = useState(0)
     const handleBreakTime = (time) => {
@@ -70,7 +82,8 @@ const Cart = (props) => {
                     </div>
                 </div>
             </div>
-            <button className='btn-activity'>Activity Completed</button>
+            <button onClick={notify} className='btn-activity'>Activity Completed</button>
+            <ToastContainer />
 
         </div>
     );
