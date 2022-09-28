@@ -16,3 +16,24 @@
     background-color: crimson;
 
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-device-width: 320px) and (max-device-width: 819px) {
+    .game-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin: 0px 26px;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (min-device-width: 820px) and (max-device-width: 1180px) {
+    .game-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 0px 26px;
+        margin-top: 60px;
+    }
+}

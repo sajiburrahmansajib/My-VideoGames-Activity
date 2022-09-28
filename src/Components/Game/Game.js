@@ -9,7 +9,7 @@ const Game = (props) => {
     return (
         <div className='game-info'>
             <img src={picture} alt="" />
-            <div>
+            <div className='text-info'>
                 <h4>{name}</h4>
                 <p>{about}</p>
                 <p>For Age : {age}</p>

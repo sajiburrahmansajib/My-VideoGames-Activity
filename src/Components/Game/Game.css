@@ -28,3 +28,39 @@
 .game-info button:hover {
     background-color: green;
 }
+
+@media screen and (min-device-width: 320px) and (max-device-width: 819px) {
+    .game-info {
+        padding: 0px 8px;
+        height: 565px;
+    }
+
+    .game-info button {
+        width: 100%;
+        background: #f59d1a;
+        border: 1px solid #95A0A7;
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-device-width: 820px) and (max-device-width: 1180px) {
+    .text-info {
+        padding: 0px 15px;
+    }
+
+    .game-info button {
+        width: 100%;
+        background: #f59d1a;
+        border: 1px solid #95A0A7;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

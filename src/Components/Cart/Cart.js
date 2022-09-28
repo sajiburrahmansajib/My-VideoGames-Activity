@@ -53,7 +53,7 @@ const Cart = (props) => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='break-container'>
                     <h2>Add A Break</h2>
                     <div id='break-time' className='time-container'>
                         <button className='time' id='btn-10'>
