@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { addToDb, getStoredData } from '../../utilities/fakedb';
 import './Cart.css'
 import pf from './ND8_0203-1-removebg-preview.png'
 
@@ -7,7 +8,12 @@ const Cart = (props) => {
     const [breakTime, setBreakTime] = useState(0)
     const handleBreakTime = (time) => {
         setBreakTime(time)
+        addToDb(time)
     }
+    useEffect(() => {
+        const storedTime = getStoredData();
+        console.log(storedTime)
+    }, [])
 
     return (
         <div className='cart'>
@@ -38,11 +44,18 @@ const Cart = (props) => {
                 <div>
                     <h2>Add A Break</h2>
                     <div id='break-time' className='time-container'>
-                        <span onClick={() => handleBreakTime(10)} className='time'>10m</span>
-                        <span onClick={() => handleBreakTime(20)} className='time'>20m</span>
-                        <span onClick={() => handleBreakTime(30)} className='time'>30m</span>
-                        <span onClick={() => handleBreakTime(40)} className='time'>40m</span>
-                        <span onClick={() => handleBreakTime(50)} className='time'>50m</span>
+                        <button className='time' id='btn-10'>
+                            <span onClick={() => handleBreakTime(10)}>10m</span>
+                        </button>
+                        <button className='time' id='btn-20'>
+                            <span onClick={() => handleBreakTime(20)}>20m</span>
+                        </button>
+                        <button className='time' id='btn-30'>
+                            <span onClick={() => handleBreakTime(30)}>30m</span>
+                        </button>
+                        <button className='time' id='btn-40'>
+                            <span onClick={() => handleBreakTime(40)}>40m</span>
+                        </button>
                     </div>
                 </div>
                 <div className='Exercise'>

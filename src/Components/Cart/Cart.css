@@ -36,17 +36,9 @@
 }
 
 .time {
-    margin-right: 15px;
-    background-color: white;
-    border-radius: 30px;
-    padding: 5px;
-}
+    margin-right: 8px;
+    border-radius: 20px;
 
-.time-container {
-    background-color: gray;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 0px 10px;
 }
 
 .Exercise {
