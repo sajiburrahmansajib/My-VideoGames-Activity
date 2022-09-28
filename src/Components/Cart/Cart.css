@@ -77,7 +77,55 @@
 
 }
 
-@media only screen and (max-width: 840px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 819px) {
+    .user-self {
+        margin: 0px 0px;
+        width: 100%;
+    }
+
+    .cart {
+        padding: 5px;
+    }
+
+    .user-self h4 {
+        font-size: 12px;
+    }
+
+    .Exercise {
+        margin-top: 10px;
+        background-color: gray;
+        border-radius: 10px;
+        margin: 0px 3px;
+        padding-bottom: 10px;
+    }
+
+    .Exercise h4 {
+        font-size: x-small;
+    }
+
+    .Exercise h2 {
+        font-size: x-small;
+        padding-top: 4px;
+    }
+
+    .btn-activity {
+        font-size: x-small;
+        margin-bottom: 10px;
+    }
+
+    .break-container h2 {
+        font-size: small;
+
+    }
+
+    .time {
+        font-size: medium;
+        margin-bottom: 6px;
+    }
+
+}
+
+@media screen and (min-device-width: 820px) and (max-device-width: 1180px) {
     .user-self {
         margin: 0px 0px;
         width: 100%;

@@ -33,7 +33,7 @@ const Cart = (props) => {
                 <div>
                     <img src={pf} alt="" />
                 </div>
-                <div>
+                <div className='my-info'>
                     <h2>MD.Sajibur Rahman</h2>
                     <p>Hello, i am Sajib and i love playing games ....</p>
                 </div>
