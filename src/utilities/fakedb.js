@@ -17,7 +17,7 @@ const getStoredData = () => {
     let timeCart = {};
 
     //get the shopping cart from local storage
-    const storedTime = localStorage.getItem('shopping-cart');
+    const storedTime = localStorage.getItem('timeCart');
     if (storedTime) {
         timeCart = JSON.parse(storedTime);
     }

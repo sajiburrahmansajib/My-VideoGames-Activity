@@ -12,7 +12,7 @@ const Cart = (props) => {
     }
     useEffect(() => {
         const storedTime = getStoredData();
-        console.log(storedTime)
+        setBreakTime(storedTime)
     }, [])
 
     return (
