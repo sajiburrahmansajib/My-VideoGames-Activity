@@ -1,14 +1,26 @@
 .game-info {
     border: 1px solid gray;
-    padding: 10px;
+    position: relative;
 }
 
 .game-info img {
-    width: 75%;
+    width: 95%;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 .game-info button {
     width: 100%;
-    position: relative;
+    background: #f59d1a;
+    border: 1px solid #95A0A7;
+    padding: 8px 0px;
+    position: absolute;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+..game-info button:hover {
+    background-color: green;
 }

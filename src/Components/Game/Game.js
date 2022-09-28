@@ -6,13 +6,14 @@ const Game = (props) => {
     return (
         <div className='game-info'>
             <img src={picture} alt="" />
-            <h4>{name}</h4>
-            <p>{about}</p>
-            <p>{age}</p>
-            <p>{time}</p>
-            <div className='btn-add'>
-                <button>Add To Activity</button>
+            <div>
+                <h4>{name}</h4>
+                <p>{about}</p>
+                <p>{age}</p>
+                <p>{time}</p>
             </div>
+            <button>Add To Activity</button>
+
 
 
         </div>
