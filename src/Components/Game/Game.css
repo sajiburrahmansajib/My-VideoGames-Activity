@@ -1,6 +1,7 @@
 .game-info {
     border: 1px solid gray;
     position: relative;
+    height: 550px;
 }
 
 .game-info img {
@@ -13,7 +14,6 @@
     width: 100%;
     background: #f59d1a;
     border: 1px solid #95A0A7;
-    padding: 8px 0px;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -21,6 +21,10 @@
     justify-content: center;
 }
 
-..game-info button:hover {
+.game-info button p {
+    margin-right: 4px;
+}
+
+.game-info button:hover {
     background-color: green;
 }

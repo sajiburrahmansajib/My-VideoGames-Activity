@@ -6,6 +6,15 @@
     padding: 10px 0px;
 }
 
+.logo-info {
+    display: flex;
+}
+
+.logo-info h2 {
+    color: yellowgreen;
+    margin-left: 9px;
+}
+
 .nav-menu a {
     color: white;
     text-decoration: none;

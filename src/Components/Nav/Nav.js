@@ -5,7 +5,11 @@ import './Nav.css'
 const Nav = () => {
     return (
         <div className='nav-container'>
-            <img src={logo} alt="" />
+            <div className='logo-info'>
+                <img src={logo} alt="" />
+                <h2>My VideGame Activity</h2>
+            </div>
+
             <div className='nav-menu'>
                 <a href="/home">Home</a>
                 <a href="/shopping">Games</a>
