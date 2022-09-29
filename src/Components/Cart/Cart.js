@@ -6,6 +6,15 @@ import './Cart.css'
 import pf from './ND8_0203-1-removebg-preview.png'
 
 const Cart = (props) => {
+    const [breakTime, setBreakTime] = useState(0)
+    useEffect(() => {
+        let storedTime = getStoredData();
+        setBreakTime(storedTime)
+    }, [breakTime])
+    const handleBreakTime = (time) => {
+        setBreakTime(time)
+        addToDb(time)
+    }
 
     const notify = () => toast.success('Yeeee ! You Done All Your Activity', {
         position: "top-center",
@@ -15,18 +24,8 @@ const Cart = (props) => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-    });;
-    // console.log(props.time)
-    const [breakTime, setBreakTime] = useState(0)
-    const handleBreakTime = (time) => {
-        setBreakTime(time)
-        addToDb(time)
-    }
-    useEffect(() => {
-        const storedTime = getStoredData();
-        setBreakTime(storedTime)
-    }, [])
-
+    });
+    console.log(props.time)
     return (
         <div className='cart'>
             <div className='user-info'>
