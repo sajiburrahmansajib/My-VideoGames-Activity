@@ -6,16 +6,16 @@ import './Cart.css'
 import pf from './ND8_0203-1-removebg-preview.png'
 
 const Cart = (props) => {
-    const [breakTime, setBreakTime] = useState(0)
-    useEffect(() => {
-        let storedTime = getStoredData();
-        setBreakTime(storedTime)
-    }, [breakTime])
-    const handleBreakTime = (time) => {
-        setBreakTime(time)
-        addToDb(time)
-    }
+    // let [breakTime, setBreakTime] = useState(0)
+    // useEffect(() => {
+    //     let storedTime = getStoredData();
+    //     setBreakTime(storedTime)
+    // }, [])
+    // const handleBreakTime = (time) => {
 
+    //     addToDb(time)
+    // }
+    const { handleBreakTime } = props
     const notify = () => toast.success('Yeeee ! You Done All Your Activity', {
         position: "top-center",
         autoClose: 5000,
@@ -25,7 +25,6 @@ const Cart = (props) => {
         draggable: true,
         progress: undefined,
     });
-    console.log(props.time)
     return (
         <div className='cart'>
             <div className='user-info'>
@@ -77,7 +76,7 @@ const Cart = (props) => {
                     </div>
                     <div className='break'>
                         <h4>Break Time</h4>
-                        <h4>{breakTime} minute</h4>
+                        <h4>{props.breakTime} minute</h4>
                     </div>
                 </div>
             </div>

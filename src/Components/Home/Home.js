@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb, getStoredData } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Game from '../Game/Game';
 import './Home.css'
@@ -6,12 +7,22 @@ import './Home.css'
 const Home = () => {
     const [games, setGames] = useState([])
     const [time, setTime] = useState(0)
+    const [breakTime, setBreakTime] = useState(0)
 
     useEffect(() => {
         fetch('fakeData.json')
             .then(res => res.json())
             .then(data => setGames(data))
     }, [])
+    useEffect(() => {
+        const storedTime = getStoredData();
+        setBreakTime(storedTime)
+    }, [games])
+    const handleBreakTime = (time) => {
+        setBreakTime(time)
+        addToDb(time)
+    }
+
     const handleAddToGame = (selectedGame) => {
         let newTime = 0
         let gameSelected = [];
@@ -21,7 +32,7 @@ const Home = () => {
             newTime = time + game.time;
             // setTime(timeCount)
         }
-        console.log(newTime)
+        // console.log(newTime)
         setTime(newTime)
 
     }
@@ -34,7 +45,7 @@ const Home = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart time={time}></Cart>
+                <Cart time={time} breakTime={breakTime} handleBreakTime={handleBreakTime}></Cart>
             </div>
         </div>
     );

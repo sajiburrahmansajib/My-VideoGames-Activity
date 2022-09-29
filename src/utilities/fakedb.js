@@ -1,6 +1,6 @@
 // use local storage to manage cart data
 const addToDb = (time) => {
-    let timeCart = {};
+    let timeCart = time;
 
     //get the shopping cart from local storage
     const storedTime = localStorage.getItem('timeCart');
@@ -14,7 +14,7 @@ const addToDb = (time) => {
 
 
 const getStoredData = () => {
-    let timeCart = {};
+    let timeCart = 0;
 
     //get the shopping cart from local storage
     const storedTime = localStorage.getItem('timeCart');
